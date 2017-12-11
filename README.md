@@ -4,6 +4,15 @@ Question routing and Expert recommendation system based on community-user engage
 ## DESCRIPTION - 
 Package contains pythonic implementation for performing StackOverflow Data analysis. The aim is to be able to recommend users to a particular question based on Random Forest classifier and K-means clustering. In order to perform analysis, the UCI's StackOverflow dataset was used. However, in the available form it was insufficient and hence needed some feature engineering to be done. Using Stack Exchange DataExplorer website and API we were able to build features as Question vector and User vector.
 
+
+### Phase 1 - [Project Proposal]()
+### Phase 2 - [Project Proposal Presentation]()
+### Phase 3 - [Progress Report]()
+### Phase 4 - [Final Poster Presentation]()
+### Phase 5 - [Final Report]()
+
+
+
 ## INSTALLATION - 
 Requirements
 1. Python 2.7
@@ -48,6 +57,7 @@ python unanswerQ.py
 ```
 
 2. User Vector
+
 For building the user vector, we used the API to provide information about users.
 First, we had to find the unique users in the StackOverflow UCI dataset and query the API to get user features like reputation, answer count, badge count, etc.
 
@@ -56,6 +66,7 @@ python userExt.py
 ```
 
 3. Cleaning
+
 Using python libraries - pyreadability and nltk, we performed 
    1. Remove HTML tags from Question body
    2. Calculate readability score
@@ -68,6 +79,7 @@ python clean.py
 ```
 
 4. K-means Clustering
+
 In order to cluster the UCI dataset based on similar questions, we used the question tags (e.g. HTML, CSS, java, python) as a parameter.
 
 ```
@@ -75,6 +87,7 @@ python Recommender.py
 ```
 
 5. RandomForest Classifier
+
 It trains the classifier using scikit-learn library and tests whether it can correctly classify an out of sample data. We performed cross-validation and evaluated the classifier's accuracy using F1-score.
 
 ```
