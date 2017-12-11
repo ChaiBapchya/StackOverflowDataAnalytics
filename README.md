@@ -5,11 +5,11 @@ Question routing and Expert recommendation system based on community-user engage
 Package contains pythonic implementation for performing StackOverflow Data analysis. The aim is to be able to recommend users to a particular question based on Random Forest classifier and K-means clustering. In order to perform analysis, the UCI's StackOverflow dataset was used. However, in the available form it was insufficient and hence needed some feature engineering to be done. Using Stack Exchange DataExplorer website and API we were able to build features as Question vector and User vector.
 
 
-### Phase 1 - [Project Proposal]()
-### Phase 2 - [Project Proposal Presentation]()
-### Phase 3 - [Progress Report]()
-### Phase 4 - [Final Poster Presentation]()
-### Phase 5 - [Final Report]()
+### Phase 1 - [Project Proposal](DOC/team37proposal.pdf)
+### Phase 2 - [Project Proposal Presentation](DOC/team37slides.pdf)
+### Phase 3 - [Progress Report](DOC/team37progress.pdf)
+### Phase 4 - [Final Poster Presentation](DOC/team37poster.pdf)
+### Phase 5 - [Final Report](DOC/team37report.pdf)
 
 
 
