@@ -37,13 +37,11 @@ Note - For ease of use, our code has API-key hardcoded (for added security we co
 
 ### Analysis
 1. Question Vector
+   1. Find unique occurrences of Questions
+   2. Based on the unique Question identifiers, get the body of the question using StackOverflow API key
+   3. Given the question text, we cleaned the HTML and extracted features like Readability score, external link count, code count, etc
+   4. Similarly, for random forest classifier training, we used API to identify whether the questions have been unanswered or not and segregated them accordingly.
 
-	a. Find unique occurrences of Questions
-	b. Based on the unique Question identifiers, get the body of the question using StackOverflow API key
-	c. Given the question text, we cleaned the HTML and extracted features like Readability score, external link count, code count, etc
-	d. Similarly, for random forest classifier training, we used API to identify whether the questions have been unanswered or not and segregated them accordingly.
-
-Command
 ```
 python extract.py
 python unanswerQ.py
@@ -53,20 +51,18 @@ python unanswerQ.py
 For building the user vector, we used the API to provide information about users.
 First, we had to find the unique users in the StackOverflow UCI dataset and query the API to get user features like reputation, answer count, badge count, etc.
 
-Command
 ```
 python userExt.py
 ```
 
 3. Cleaning
 Using python libraries - pyreadability and nltk, we performed 
-	a. Remove HTML tags from Question body
-	b. Calculate readability score
-	c. Determine the number of code fragments
-	d. Find the number of external links
-	e. Find the word count of the question
+   1. Remove HTML tags from Question body
+   2. Calculate readability score
+   3. Determine the number of code fragments
+   4. Find the number of external links
+   5. Find the word count of the question
 
-Command 
 ```
 python clean.py
 ```
@@ -74,7 +70,6 @@ python clean.py
 4. K-means Clustering
 In order to cluster the UCI dataset based on similar questions, we used the question tags (e.g. HTML, CSS, java, python) as a parameter.
 
-Command
 ```
 python Recommender.py
 ```
@@ -82,7 +77,6 @@ python Recommender.py
 5. RandomForest Classifier
 It trains the classifier using scikit-learn library and tests whether it can correctly classify an out of sample data. We performed cross-validation and evaluated the classifier's accuracy using F1-score.
 
-Command
 ```
 python Classifier.py
 ```
